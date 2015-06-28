@@ -1,0 +1,15 @@
+data/stream.go.i
+data/structs_test.go.i
+data/stream_test.go.i
+data/roster_test.go.i
+data/.hgeol.i
+data/xmpp.go.i
+data/structs.go.i
+data/roster.go.i
+data/.hgtags.i
+data/README.i
+data/examples/Makefile.i
+data/log.go.i
+data/examples/interact.go.i
+data/xmpp_test.go.i
+data/Makefile.i
