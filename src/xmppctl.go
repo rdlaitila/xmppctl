@@ -5,6 +5,7 @@ import (
     "encoding/xml"
     "fmt"
     "log"
+    "os"
     "os/exec"
     "sync"
     "time"
@@ -22,6 +23,11 @@ func main() {
     xmpp.Info = logger
     xmpp.Warn = logger
     xmpp.TlsConfig = tls.Config{InsecureSkipVerify: true}
+    
+    jid := xmpp.JID{} 
+    jid.Set(os.Getenv("XMPPCTL_JID"))
+    pw := os.Getenv("XMPPCTL_PW")
+    
     
     // setup our xmpp client
     client, err := xmpp.NewClientFromHost(&jid, pw, nil, "208.112.63.36", 5222)
